@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Токен получен</title>
+    <style>
+        body { font-family: -apple-system, sans-serif; background: #111; color: #fff; text-align: center; padding: 40px; }
+        .box { max-width: 500px; margin: 60px auto; padding: 30px; background: #1a1a1a; border-radius: 12px; }
+        .ok { color: #4f4; font-size: 18px; }
+        .err { color: #f44; font-size: 18px; }
+        code { background: #333; padding: 6px 12px; border-radius: 6px; word-break: break-all; font-size: 13px; color: #0f0; }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p id="status">Обрабатываем...</p>
+        <code id="codeBox" style="display:none"></code>
+    </div>
+    <script>
+        var p = new URLSearchParams(window.location.search);
+        var code = p.get('code');
+        if (code) {
+            document.getElementById('status').className = 'ok';
+            document.getElementById('status').textContent = 'Код получен! Скопируйте его:';
+            document.getElementById('codeBox').style.display = 'block';
+            document.getElementById('codeBox').textContent = code;
+        } else {
+            var err = p.get('error_description') || p.get('error') || 'Неизвестная ошибка';
+            document.getElementById('status').className = 'err';
+            document.getElementById('status').textContent = 'Ошибка: ' + err;
+        }
+    </script>
+</body>
+</html>
