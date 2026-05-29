@@ -1,8 +1,45 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head><meta charset="utf-8"><title>TikTok Auth</title></head>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TikTok Auto Publisher</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #fff; color: #222; line-height: 1.6; }
+        header { background: #111; color: #fff; padding: 60px 20px; text-align: center; }
+        header h1 { font-size: 2.2em; margin-bottom: 10px; }
+        header p { color: #aaa; font-size: 1.1em; }
+        main { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        section { margin-bottom: 40px; }
+        h2 { font-size: 1.5em; margin-bottom: 15px; border-bottom: 2px solid #eee; padding-bottom: 8px; }
+        p { margin-bottom: 12px; color: #444; }
+        footer { text-align: center; padding: 30px 20px; color: #999; font-size: 0.9em; border-top: 1px solid #eee; }
+        a { color: #0066cc; }
+    </style>
+</head>
 <body>
-    <h1>TikTok Auto Posting</h1>
-    <p>Redirect URI for TikTok OAuth callback.</p>
+    <header>
+        <h1>TikTok Auto Publisher</h1>
+        <p>Automated video publishing tool for content creators</p>
+    </header>
+    <main>
+        <section>
+            <h2>About</h2>
+            <p>TikTok Auto Publisher is a desktop automation tool that helps content creators publish videos to TikTok via the official TikTok Content Posting API. The application runs locally on your machine and uses OAuth 2.0 for secure authentication.</p>
+            <p>Features: scheduled publishing, batch uploads, privacy controls, duet/stitch/comment management.</p>
+        </section>
+        <section>
+            <h2>How It Works</h2>
+            <p>The application authenticates via TikTok's OAuth 2.0 flow with PKCE. Once authorized, it can upload and publish videos directly through the TikTok API. All credentials are stored locally on your device.</p>
+        </section>
+        <section>
+            <h2>Links</h2>
+            <p><a href="terms.html">Terms of Service</a> — <a href="privacy.html">Privacy Policy</a></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 TikTok Auto Publisher. Not affiliated with TikTok.</p>
+    </footer>
 </body>
 </html>
